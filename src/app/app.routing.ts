@@ -6,7 +6,7 @@ import { AuthGuard } from './shared/services/auth/auth.guard';
 export const rootRouterConfig: Routes = [
   { 
     path: '', 
-    redirectTo: 'others', 
+    redirectTo: 'upload', 
     pathMatch: 'full' 
   },
 
@@ -27,9 +27,9 @@ export const rootRouterConfig: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'others', 
+        path: 'upload', 
         loadChildren: './views/others/others.module#OthersModule', 
-        data: { title: 'Others', breadcrumb: 'OTHERS'}
+        data: { title: 'Upload', breadcrumb: 'UPLOAD'}
       }
     ]
   },

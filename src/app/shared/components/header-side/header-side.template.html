@@ -32,6 +32,7 @@
   <span fxFlex></span>
   <!-- Language Switcher -->
   <mat-select 
+  *ngIf="showLanguageSwitcher"
   placeholder=""
   id="langToggle"
   [style.width]="'auto'"
@@ -44,6 +45,7 @@
   </mat-select>
   <!-- Theme Switcher -->
   <button 
+  *ngIf="showThemeSwitcher"
   mat-icon-button
   id="schemeToggle" 
   [style.overflow]="'visible'"
@@ -52,7 +54,7 @@
   class="topbar-button-right">
     <mat-icon>format_color_fill</mat-icon>
   </button>
-  <mat-menu #themeMenu="matMenu">
+  <mat-menu *ngIf="showThemeSwitcher" #themeMenu="matMenu">
     <mat-grid-list
     class="theme-list" 
     cols="2" 
@@ -69,6 +71,7 @@
   </mat-menu>
   <!-- Notification toggle button -->
   <button 
+  *ngIf="showNotifications"
   mat-icon-button
   matTooltip="Notifications" 
   (click)="toggleNotific()"
@@ -79,7 +82,7 @@
   </button>
   <!-- Top left user menu -->
   <button mat-icon-button [matMenuTriggerFor]="accountMenu" class="topbar-button-right img-button">
-    <img src="assets/images/face-7.jpg" alt="">
+    <img src="assets/images/niap.jpg" alt="">
   </button>
   <mat-menu #accountMenu="matMenu">
     <button mat-menu-item [routerLink]="['/profile/overview']">

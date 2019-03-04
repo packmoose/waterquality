@@ -15,6 +15,7 @@ export class HeaderTopComponent implements OnInit, OnDestroy {
   menuItemSub: Subscription;
   egretThemes: any[] = [];
   currentLang = 'en';
+
   availableLangs = [{
     name: 'English',
     code: 'en',

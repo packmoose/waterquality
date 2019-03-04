@@ -19,6 +19,11 @@ export class HeaderSideComponent implements OnInit {
   }]
   public egretThemes;
   public layoutConf:any;
+
+  showLanguageSwitcher: boolean = false; //first draft
+  showThemeSwitcher: boolean = false; //first draft
+  showNotifications: boolean = false; //first draft
+
   constructor(
     private themeService: ThemeService,
     private layout: LayoutService,

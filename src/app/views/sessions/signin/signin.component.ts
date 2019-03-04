@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatProgressBar, MatButton } from '@angular/material';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router'; //first draft
+import { AuthGuard } from '../../../shared/services/auth/auth.guard'; //first draft
 
 @Component({
   selector: 'app-signin',
@@ -13,7 +15,10 @@ export class SigninComponent implements OnInit {
 
   signinForm: FormGroup;
 
-  constructor() { }
+  constructor(
+    private auth: AuthGuard, //first draft (originally no dependency injection)
+    private router: Router //first draft
+  ) { }
 
   ngOnInit() {
     this.signinForm = new FormGroup({
@@ -25,7 +30,10 @@ export class SigninComponent implements OnInit {
 
   signin() {
     const signinData = this.signinForm.value
-    console.log(signinData);
+    //console.log(signinData); //action placeholder
+    this.auth.Authenticate(signinData); //temporary action - first draft implementation
+    this.router.navigate(['/others']); //temporary action - first draft implementation
+
 
     this.submitButton.disabled = true;
     this.progressBar.mode = 'indeterminate';

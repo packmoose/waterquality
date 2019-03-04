@@ -1,3 +1,10 @@
-<p class="m-333">
-  This is a blank component.
-</p>
+<form #documentForm="ngForm" (ngSubmit)="onSubmit(documentForm);documentForm.reset();useNewFileName=false">
+  
+    <div class="form-group">
+      <label class="btn btn-default">
+        <input type="file" (change)="selectFile($event)" #fileSelectionInput>
+      </label>          
+    </div>
+    <input class="btn btn-success" [disabled]="!documentForm.form.valid || !selectedFiles" type="submit" value="Upload">
+    
+</form>

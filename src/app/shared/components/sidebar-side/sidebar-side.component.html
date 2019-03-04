@@ -19,11 +19,11 @@
     <!-- Sidebar user -->
     <div class="app-user">
       <div class="app-user-photo">
-        <img src="assets/images/face-7.jpg" alt="">
+        <img src="assets/images/niap.jpg" alt="">
       </div>
       <span class="app-user-name mb-05">
         <mat-icon class="icon-xs text-muted">lock</mat-icon> 
-        Watson Joyce
+        North Iowa Agronomy
       </span>
       <!-- Small buttons -->
       <div class="app-user-controls">
@@ -47,7 +47,8 @@
         mat-icon-button 
         mat-xs-button
         matTooltip="Sign Out"
-        routerLink="/sessions/signin">
+        routerLink="/sessions/signin"
+        (click)="signOut()">
           <mat-icon>exit_to_app</mat-icon>
         </button>
         <mat-menu #appUserMenu="matMenu">

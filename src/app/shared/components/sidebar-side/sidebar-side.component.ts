@@ -42,5 +42,8 @@ export class SidebarSideComponent implements OnInit, OnDestroy, AfterViewInit {
       this.menuItemsSub.unsubscribe()
     }
   }
+  signOut() { //first draft - temporary solution
+    localStorage.clear();
+  }
 
 }
