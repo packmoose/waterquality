@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { AmplifyService } from 'aws-amplify-angular';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
   public authToken;
   private isAuthenticated: boolean = localStorage.getItem('access') == 'xKcd23#41$FinepiTry+'; // Set this value dynamically - first draft (originally hard set to true)
   
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private amplifyService: AmplifyService
+  ) {}
   
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (this.isAuthenticated) {

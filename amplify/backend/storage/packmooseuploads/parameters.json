@@ -1,0 +1,13 @@
+{
+    "bucketName": "packmoose-uploads",
+    "authPolicyName": "s3_amplify_a3152496",
+    "unauthPolicyName": "s3_amplify_a3152496",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

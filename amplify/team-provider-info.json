@@ -1,0 +1,19 @@
+{
+    "packmoose": {
+        "awscloudformation": {
+            "AuthRoleName": "waterquality-20190305120724-authRole",
+            "UnauthRoleArn": "arn:aws:iam::022563204383:role/waterquality-20190305120724-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::022563204383:role/waterquality-20190305120724-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "waterquality-20190305120724-deployment",
+            "UnauthRoleName": "waterquality-20190305120724-unauthRole",
+            "StackName": "waterquality-20190305120724",
+            "StackId": "arn:aws:cloudformation:us-east-1:022563204383:stack/waterquality-20190305120724/87686190-3f71-11e9-9b35-0a6d3ce3777a"
+        },
+        "categories": {
+            "auth": {
+                "cognito9d1b9fcf": {}
+            }
+        }
+    }
+}

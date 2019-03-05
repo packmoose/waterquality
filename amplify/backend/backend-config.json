@@ -1,0 +1,14 @@
+{
+	"auth": {
+		"cognito9d1b9fcf": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"storage": {
+		"packmooseuploads": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
