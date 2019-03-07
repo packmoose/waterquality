@@ -48,13 +48,8 @@ export class UploadFileService {
     const bucket = new S3(
       //this.auth.session.bucket
       {
-<<<<<<< HEAD
-        accessKeyId: 'YOUR-ACCESS-KEY-ID',
-        secretAccessKey: 'YOUR-SECRET-ACCESS-KEY',
-=======
         accessKeyId: 'YOUR_ACCESS_KEY_ID',
         secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
->>>>>>> d31207a... installed aws-amplify
         region: 'us-east-1'
       }
     );
